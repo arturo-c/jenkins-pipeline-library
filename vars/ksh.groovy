@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-def ksh(command) {
+def call(command) {
         if (env.CONTAINER_NAME) {
                 if ((command instanceof String) || (command instanceof GString)) {
                         command = kubectl(command)
